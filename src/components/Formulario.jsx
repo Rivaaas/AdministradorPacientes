@@ -41,32 +41,20 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
         email,
         alta,
         sintomas,
-        id: generarID(),
       };
 
-      if (pacientes.id) {
-        objetoPaciente.id = paciente.id
-        console.log(objetoPaciente)
-        console.log(paciente)
+      if (paciente.id) {
+        objetoPaciente.id = paciente.id;
+        const pacientesActualizados = pacientes.map((pacienteState) =>
+          pacienteState.id === paciente.id ? objetoPaciente : pacienteState
+        );
 
-        const pacientesActualizados = pacientes.map( pacienteState => pacienteState.id ===
-          paciente.id ? objetoPaciente : pacienteState)
-
-          setPacientes(pacientesActualizados)
-
+        setPacientes(pacientesActualizados);
       } else {
         objetoPaciente.id = generarID();
         setPacientes([...pacientes, objetoPaciente]);
 
-
         //Reiniciar FORM
-
-        setNombre("");
-        setPropietario("");
-        setEmail("");
-        setFecha("");
-        setSintomas("");
-
       }
     }
   };
@@ -125,7 +113,7 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
           onChange={(e) => setSintomas(e.target.value)}
         />
         <br />
-        <input type="submit" className="btn btn-primary" value="Registrar" />
+        <input type="submit" className="btn btn-primary" value={ paciente.id ? 'editar Paciente' : 'agregar paciente'} />
       </form>
     </div>
   );

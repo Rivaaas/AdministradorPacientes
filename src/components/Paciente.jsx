@@ -12,35 +12,36 @@ const Paciente = ({ pacientes, setPaciente,eliminarPaciente }) => {
   return (
     <div>
       <div>
-        <div className="m-3 color shadow-md px-5 py-10 inputLista">
+        <div className="m-3 color shadow-md px-5 py-10 inputLista cuadro">
           <p>
-            Nombre:{""}
+            Nombre:{" "}
             <span>{pacientes.nombre}</span>
           </p>
           <p>
-            Propietario:{""}
+            Propietario:{" "}
             <span>{pacientes.propietario}</span>
           </p>
           <p>
-            Email:{""}
+            Email:{" "}
             <span>{pacientes.email}</span>
           </p>
           <p>
-            Alta:{""}
+            Alta:{" "}
             <span>{pacientes.alta}</span>
           </p>
           <p>
-            Sintomas:{""}
+            Sintomas:{" "}
             <span>{pacientes.sintomas}</span>
           </p>
           <button
             type="button"
             onClick={() => setPaciente(pacientes)}
-            className="btn btn-warning"
+            className="btn btn-dark btnEditar"
+
           >
             Editar
           </button>
-          <button type="button" className="btn btn-danger" onClick={handleEliminar}>
+          <button type="button" className="btn btn-danger botonmorado" onClick={handleEliminar}>
             Eliminar
           </button>
         </div>

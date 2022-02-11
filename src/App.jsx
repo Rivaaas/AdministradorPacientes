@@ -18,16 +18,16 @@ function App() {
   return (
     <>
       <div className="container">
-        <div className="row ">
+        <div className="row">
         
-          <div className="col-sm-7">
+          <div className="col-sm-6 mt-2 maximo">
             <Formulario
             setPacientes = {setPacientes}
             pacientes = {pacientes}
             paciente = {paciente}
             />
           </div>
-          <div className="col-sm-5">
+          <div className="col-sm-6">
             <ListadoPacientes 
             pacientes={pacientes}
             setPaciente = {setPaciente}

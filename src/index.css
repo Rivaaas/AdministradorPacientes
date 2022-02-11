@@ -1,19 +1,82 @@
-.color{
-    background-color: white;
-
+.color {
+  background-color: white;
 }
-body{
-    background-color: white;
-}
-
-.input1{
-    width: 30%;
+body {
+  background-color: rgb(199, 199, 199);
 }
 
-form{
-    background-color: white;
+.input1 {
+  width: 30%;
 }
 
-.inputLista{
-    padding: 17px;
+form {
+  background-color: white;
+}
+
+.inputLista {
+  padding: 17px;
+}
+
+.cuadro {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+  border-radius: 10px;
+}
+.cuadro2 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-bottom: -20px;
+  height: 96%;
+}
+
+.btnEditar {
+  position: absolute;
+  left: 80%;
+}
+
+.boton1 {
+  width: 100%;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-bottom: 0px;
+}
+
+.form1 {
+  font-family: fantasy;
+}
+.letramorada {
+  font-family: fantasy;
+  color: blueviolet;
+}
+
+.rojo {
+  color: red;
+  font-family: fantasy;
+}
+
+.fuente {
+  font-family: fantasy;
+}
+
+.colorgris {
+  background-color: rgb(255, 255, 255);
+}
+
+.almedio {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 40%;
+    right: 25%;
+}
+
+
+.botonmorado{
+    background-color: blueviolet;
+}
+
+.maximo{
+    max-width: 560;
+    max-height: 633;
 }

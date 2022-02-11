@@ -60,10 +60,13 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
   };
 
   return (
-    <div>
-      <h1>Formulario</h1>
-      <span>Añade pacientes y administralos</span>
-      <form className="p-5 mt-2" onSubmit={handleSubmit}>
+    <div className="cuadro2">
+      <div>
+        <h2 className="text-center form1">Seguimiento paciente </h2>
+        <h2 className="text-center letramorada"> Veterinaria</h2>
+      </div>
+      <h5 className="text-center form1">Añade pacientes y administralos</h5>
+      <form className="p-4 " onSubmit={handleSubmit}>
         <label>Nombre Mascota</label> <br />
         <input
           type="text"
@@ -113,7 +116,11 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
           onChange={(e) => setSintomas(e.target.value)}
         />
         <br />
-        <input type="submit" className="btn btn-primary" value={ paciente.id ? 'editar Paciente' : 'agregar paciente'} />
+        <input
+          type="submit"
+          className="btn btn-dark boton1"
+          value={paciente.id ? "Editar Paciente" : "Agregar paciente"}
+        />
       </form>
     </div>
   );

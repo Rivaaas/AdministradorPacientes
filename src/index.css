@@ -30,8 +30,8 @@ form {
 }
 
 .btnEditar {
-  position: absolute;
-  left: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .boton1 {
@@ -63,20 +63,43 @@ form {
 }
 
 .almedio {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 40%;
-    right: 25%;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 40%;
+  right: 25%;
 }
 
-
-.botonmorado{
-    background-color: blueviolet;
+.botonmorado {
+  background-color: blueviolet;
+  border: 1px;
 }
 
-.maximo{
-    max-width: 560;
-    height: 50%;
+.maximo {
+  max-width: 560;
+  height: 50%;
+}
+
+.max {
+  max-width: 992;
+  max-height: 749;
+}
+
+.divboton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.space {
+  display: flex;
+
+  justify-content: end;
+  
+}
+.space2 {
+  display: flex;
+
+  justify-content: end;
+  
 }

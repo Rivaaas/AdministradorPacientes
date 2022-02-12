@@ -31,7 +31,8 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
     e.preventDefault();
 
     if ([nombre, propietario, email, alta, sintomas].includes("")) {
-      console.log("Campo vacio");
+      const respuesta = confirm("Campo Vacio");
+
     } else {
       //Objeto del paciente
 
@@ -89,7 +90,7 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
         <br />
         <label>Email</label> <br />
         <input
-          type="text"
+          type="email"
           id="email"
           className="form-control"
           placeholder="Email"

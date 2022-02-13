@@ -7,6 +7,7 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
   const [email, setEmail] = useState("");
   const [alta, setAlta] = useState("");
   const [sintomas, setSintomas] = useState("");
+  const [error,setError] = useState(false);
 
   useEffect(() => {
     if (Object.keys(paciente).length > 0) {
@@ -31,10 +32,11 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
     e.preventDefault();
 
     if ([nombre, propietario, email, alta, sintomas].includes("")) {
-      const respuesta = confirm("Campo Vacio");
+      setError(true);
 
     } else {
-      //Objeto del paciente
+      
+        //Objeto del paciente
 
       const objetoPaciente = {
         nombre,
@@ -43,6 +45,9 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
         alta,
         sintomas,
       };
+      setError(false);
+
+
 
       if (paciente.id) {
         objetoPaciente.id = paciente.id;
@@ -51,11 +56,11 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
         );
 
         setPacientes(pacientesActualizados);
+        
       } else {
         objetoPaciente.id = generarID();
         setPacientes([...pacientes, objetoPaciente]);
 
-        //Reiniciar FORM
       }
     }
   };
@@ -122,6 +127,7 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
           className="btn btn-dark boton1"
           value={paciente.id ? "Editar Paciente" : "Agregar paciente"}
         />
+        <h1 className="error">{error ? 'Campo Vacio' : ''}</h1>
       </form>
     </div>
   );

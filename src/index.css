@@ -11,6 +11,7 @@ body {
 
 form {
   background-color: white;
+  height: 50%;
 }
 
 .inputLista {
@@ -56,6 +57,7 @@ form {
 
 .fuente {
   font-family: fantasy;
+  display: flex;
 }
 
 .colorgris {
@@ -74,16 +76,12 @@ form {
 .botonmorado {
   background-color: blueviolet;
   border: 1px;
+  display: flex;
 }
-
-.maximo {
-  max-width: 560;
-  height: 50%;
-}
-
-.max {
-  max-width: 992;
-  max-height: 749;
+.btn1 {
+  border: 1px;
+  display: flex;
+  width: 20%;
 }
 
 .divboton {
@@ -95,11 +93,57 @@ form {
   display: flex;
 
   justify-content: end;
-  
 }
 .space2 {
   display: flex;
 
   justify-content: end;
-  
 }
+
+.error {
+  color: red;
+  border: 1px solid black;
+  margin-top: 10px;
+  justify-content: center;
+  display: flex;
+  font-family: fantasy;
+}
+
+.borde {
+  border: 1px solid green !important;
+}
+
+.margen {
+  margin-top: 10rem;
+}
+
+.query {
+  display: flex;
+  justify-content: start;
+}
+.btn2 {
+  display: flex;
+  justify-content: start;
+  width: 60%;
+}
+
+
+.rowcss{
+  width: 100%;
+  display: flex;
+}
+
+
+.btns{
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  .btns {
+    align-items: end;
+    justify-content: start;
+    width: 100%;
+  }
+}
+

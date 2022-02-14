@@ -6,8 +6,8 @@ const ListadoPacientes = ({ pacientes, setPaciente, eliminarPaciente }) => {
       <div className="row align-items-center ">
         {pacientes && pacientes.length ? (
           <>
-            <div className="fondo">
-              <div className="text-center mt-7">
+            <div className="fondo m">
+              <div className="text-center m1">
                 <h1 className=" fuente d-flex justify-content-center ">
                   Listado Pacientes
                 </h1>
@@ -30,7 +30,7 @@ const ListadoPacientes = ({ pacientes, setPaciente, eliminarPaciente }) => {
         ) : (
           <>
             <div className="container">
-              <div className="row ">
+              <div className="row m1">
                 <h1 className="col-sm-12 d-flex justify-content-center fuente mt-10">
                   Listado Pacientes
                 </h1>

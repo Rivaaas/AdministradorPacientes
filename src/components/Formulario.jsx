@@ -8,6 +8,28 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
   const [alta, setAlta] = useState("");
   const [sintomas, setSintomas] = useState("");
   const [error,setError] = useState(false);
+  const [errorCorreo,setErrorCorreo] = useState(false)
+  
+ 
+  const validar_mail = () =>{
+   
+    var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email) ? true : false;
+  
+  }
+
+
+  const verificacion= (email) =>{
+    if(validar_mail(email)){
+      console.log("correcto")
+    }else{
+      console.log("incorrecto")
+      setError(true)
+      return
+
+    }
+  }
+
 
   useEffect(() => {
     if (Object.keys(paciente).length > 0) {
@@ -31,6 +53,9 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    
+    
+
     if ([nombre, propietario, email, alta, sintomas].includes("")) {
       setError(true);
 
@@ -45,6 +70,14 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
         alta,
         sintomas,
       };
+      if(validar_mail(email)){
+        console.log("correcto")
+      }else{
+        console.log("incorrecto")
+        setError(true)
+        return
+  
+      }
       setError(false);
 
 
@@ -64,6 +97,8 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
       }
     }
   };
+
+ 
 
   return (
     <div className="cuadro2">
@@ -97,10 +132,12 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
         <input
           type="email"
           id="email"
+          name="email"
           className="form-control"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <br />
         <label>Alta</label> <br />
@@ -127,7 +164,7 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
           className="btn btn-dark boton1 mb-4"
           value={paciente.id ? "Editar Paciente" : "Agregar paciente"}
         />
-        <h1 className="error mb-5">{error ? 'Campo Vacio' : ''}</h1>
+        <h1 className="error mb-5">{error ? 'Error en datos' : ''}</h1>
       </form>
     </div>
   );

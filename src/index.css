@@ -27,7 +27,7 @@ form {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   margin-bottom: -20px;
-  height: 96%;
+  max-height: 70%;
 }
 
 .btnEditar {
@@ -146,5 +146,10 @@ form {
     justify-content: start;
     width: 100%;
   }
+  
 }
 
+@media (min-height: 725px){
+  .cuadro2 {
+  }
+}

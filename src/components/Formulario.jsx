@@ -124,10 +124,10 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
         <br />
         <input
           type="submit"
-          className="btn btn-dark boton1"
+          className="btn btn-dark boton1 mb-4"
           value={paciente.id ? "Editar Paciente" : "Agregar paciente"}
         />
-        <h1 className="error">{error ? 'Campo Vacio' : ''}</h1>
+        <h1 className="error mb-5">{error ? 'Campo Vacio' : ''}</h1>
       </form>
     </div>
   );

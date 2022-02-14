@@ -43,20 +43,19 @@ form {
 }
 
 .form1 {
-  font-family: fantasy;
+  font-family: sans-serif;
 }
 .letramorada {
-  font-family: fantasy;
+  font-family: sans-serif;
   color: blueviolet;
 }
 
 .rojo {
   color: red;
-  font-family: fantasy;
+  font-family: sans-serif;
 }
 
 .fuente {
-  font-family: fantasy;
   display: flex;
 }
 
@@ -106,7 +105,8 @@ form {
   margin-top: 10px;
   justify-content: center;
   display: flex;
-  font-family: fantasy;
+  font-family: sans-serif;
+  
 }
 
 .borde {

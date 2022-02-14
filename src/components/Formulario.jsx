@@ -72,6 +72,11 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
       };
       if(validar_mail(email)){
         console.log("correcto")
+        setNombre("");
+        setPropietario("");
+        setEmail("");
+        setAlta("");
+        setSintomas("");
       }else{
         console.log("incorrecto")
         setError(true)

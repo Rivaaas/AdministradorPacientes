@@ -107,7 +107,7 @@ const Formulario = ({ setPacientes, pacientes, paciente }) => {
         <h2 className="text-center letramorada"> Veterinaria</h2>
       </div>
       <h5 className="text-center form1">Añade pacientes y administralos</h5>
-      <form className="p-4 " onSubmit={handleSubmit}>
+      <form className="p-4 form2 " onSubmit={handleSubmit}>
         <label>Nombre Mascota</label> <br />
         <input
           type="text"

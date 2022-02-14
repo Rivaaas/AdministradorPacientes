@@ -7,8 +7,8 @@ const ListadoPacientes = ({ pacientes, setPaciente, eliminarPaciente }) => {
         {pacientes && pacientes.length ? (
           <>
             <div className="fondo">
-              <div className="text-center">
-                <h1 className=" fuente d-flex justify-content-center mt-5">
+              <div className="text-center mt-7">
+                <h1 className=" fuente d-flex justify-content-center ">
                   Listado Pacientes
                 </h1>
                 <h5 className=" fuente d-flex justify-content-center">

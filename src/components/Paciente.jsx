@@ -30,7 +30,7 @@ const Paciente = ({ pacientes, setPaciente, eliminarPaciente }) => {
             </p>
           </div>
           <div className="row">
-            <div className="col-sm-6 col-4  d-flex space query">
+            <div className="col-sm-6 col-6  d-flex space query">
               <button
                 type="button"
                 onClick={() => setPaciente(pacientes)}
@@ -39,7 +39,7 @@ const Paciente = ({ pacientes, setPaciente, eliminarPaciente }) => {
                 Editar
               </button>
             </div>
-            <div className="col-sm-6 col-4  d-flex">
+            <div className="col-sm-6 col-6  d-flex">
               <button
                 type="button"
                 className=" btn btn-light btns botonmorado d-flex justify-content-center"

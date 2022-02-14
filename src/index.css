@@ -76,6 +76,7 @@ form {
   background-color: blueviolet;
   border: 1px;
   display: flex;
+  width: 100%;
 }
 .btn1 {
   border: 1px;

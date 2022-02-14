@@ -23,12 +23,6 @@ form {
   border: 1px solid;
   border-radius: 10px;
 }
-.cuadro2 {
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  margin-bottom: -20px;
-  max-height: 70%;
-}
 
 .btnEditar {
   display: flex;
@@ -147,6 +141,12 @@ form {
     width: 100%;
   }
   
+}
+.cuadro2 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-bottom: -20px;
+  max-height: 60%;
 }
 
 @media (min-height: 725px){
